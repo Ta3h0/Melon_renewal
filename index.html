@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melon::음악이 필요할 땐? 멜론!</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/Project_melon.CSS">
+</head>
+
+<body>
+    <header><!-- 네비게이션 바는 헤더에 작성 -->
+        <div class="header">
+            <div class="logo">
+                <a href="#"><img src="img/로고.png" alt="로고" /></a>
+            </div><!-- .logo end -->
+
+            <div class="search">
+                <input type="text" autocomplete="off" placeholder="        곡 제목이나 가수, 앨범명을 입력해주세요.">
+                <a href="#"><img src="img/돋보기.png" alt="검색"></a>
+            </div><!-- .search end -->
+
+            <div class="hot_topic">
+                <div class="hot_topic_icon">
+                    <p>급상승</p>
+                    <img src="img/급상승.png" alt="급상승">
+                </div><!-- .hot_topic_icon end -->
+                <div class="hot_topic_list">
+                    <p>1. 임영웅</p>
+                </div><!-- .hot_topic_list end -->
+
+                <div class="hot_toppic_value">
+                    <p>-0</p>
+                </div><!-- .hot_topic_value end -->
+            </div><!-- .hot topic end -->
+            <ul class="top_menu_list">
+                <li><a href="#">이용권 구매</a></li>
+                <li><a href="#">멜론 라운지</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">공지 사항</a></li>
+            </ul>
+        </div><!-- .header end -->
+        <nav>
+            <div class="login">
+                <div class="login_box">
+                    <input type="text" autocomplete="off" placeholder="🙍‍♂️아이디" required>
+                    <input type="password" autocomplete="off" placeholder="🔒비밀번호" required>
+                    <input class="login_btn" type="button" value="  로그인">
+                </div><!-- .login_box end -->
+            </div><!-- .login end -->
+            <ul class="gnb">
+                <li class="depth1">
+                    <a href="https://www.melon.com/chart/index.htm">멜론 차트</a>
+                    <ul class="depth2">
+                        <li><a href="#">TOP100</a></li>
+                        <li><a href="#">일간</a></li>
+                        <li><a href="#">주간</a></li>
+                        <li><a href="#">월간</a></li>
+                        <li><a href="#">시대</a></li>
+                    </ul><!-- .depth2 end -->
+                </li><!-- .depth1 end -->
+                <li class="depth1">
+                    <a href="https://www.melon.com/new/index.htm">최신 음악</a>
+                    <ul class="depth2">
+                        <li><a href="#">최신곡</a></li>
+                        <li><a href="#">최신 앨범</a></li>
+                        <li><a href="#">최신 뮤직비디오</a></li>
+                    </ul><!-- .depth2 end -->
+                </li><!-- .depth1 end -->
+                <li class="depth1">
+                    <a href="https://www.melon.com/genre/song_list.htm">장르 음악</a>
+                    <ul class="depth2">
+                        <li><a href="#">한국 대중음악</a></li>
+                        <li><a href="#">해외 POP음악</a></li>
+                        <li><a href="#">그외 인기장르</a></li>
+                    </ul><!-- .depth2 end -->
+                </li><!-- .depth1 end -->
+                <li class="depth1">
+                    <a href="https://www.melon.com/dj/today/djtoday_list.htm">멜론 DJ</a>
+                    <ul class="depth2">
+                        <li><a href="#">투데이</a></li>
+                        <li><a href="#">전문가 선곡</a></li>
+                        <li><a href="#">#테마장르</a></li>
+                        <li><a href="#">파워 DJ</a></li>
+                        <li><a href="#">인기</a></li>
+                    </ul><!-- .depth2 end -->
+                </li><!-- .depth1 end -->
+                <li class="depth1">
+                    <a href="https://www.melon.com/tv/index.htm">멜론 TV</a>
+                    <ul class="depth2">
+                        <li><a href="#">오늘은 뭘 볼까</a></li>
+                        <li><a href="#">뮤직비디오</a></li>
+                        <li><a href="#">멜론 오리지널</a></li>
+                        <li><a href="#">아티스트 업데이트</a></li>
+                        <li><a href="#">방송</a></li>
+                    </ul><!-- .depth2 end -->
+                </li><!-- .depth1 end -->
+                <li class="depth1">
+                    <a href="https://www.melon.com/artistplus/todayupdate/index.htm">스타 포스트</a>
+                    <ul class="depth2">
+                        <li><a href="#">NOW</a></li>
+                        <li><a href="#">아티스트 랭킹</a></li>
+                        <li><a href="#">마이 랭킹</a></li>
+                    </ul><!-- .depth2 end -->
+                </li><!-- .depth1 end -->
+                <li class="depth1">
+                    <a href="https://www.melon.com/musicstory/today/index.htm"">매거진</a>
+                </li><!-- .depth1 end -->
+                <li class=" depth1">
+                        <a href="https://www.melon.com/melonaward/weekAward.htm" target="_blank">뮤직 어워드</a>
+                </li><!-- .depth1 end -->
+                <li class="depth1">
+                    <a href="https://www.melon.com/edu/index.htm"">어학</a>
+                </li><!-- .depth1 end -->
+                <li class=" depth1">
+                        <a href="https://musicwave.melon.com/" target="_blank">뮤직 웨이브</a>
+                </li><!-- .depth1 end -->
+                <li class="depth1">
+                    <a href="javascript:MELON.WEBSVC.POC.menu.goMyMusicMain();">마이 뮤직</a>
+                    <ul class="depth2">
+                        <li><a href="#">찜한 노래</a></li>
+                        <li><a href="#">내 아티스트 채널</a></li>
+                        <li><a href="#">내 뮤직 맵</a></li>
+                    </ul><!-- .depth2 end -->
+                </li><!-- .depth1 end -->
+            </ul><!-- .gnb end -->
+            </ul>
+        </nav>
+    </header>
+
+    <main><!-- 웹 플레이어는 메인 끝나기전 가장 아래에 작성 -->
+        <div class="cont1">
+            <h1>최신음악</h1>
+            <ul class="cont1_menu">
+                <li><a href="#">종합</a></li>
+                <li><a href="#">국내</a></li>
+                <li><a href="#">해외</a></li>
+                <li><a href="#">
+                        <>
+                    </a></li>
+            </ul><!-- .cont1_menu end -->
+            <div class="cont1_list">
+                <div class="cont1_list_top">
+                    <div class="cont1_item">
+                        <a href="https://www.melon.com/album/detail.htm?albumId=11257309" target="_blank">
+                            <img src="img/너는 내 자랑이었어.jpg" alt="아이템1" />
+                            <div class="cont1_item_txt">
+                                <h3>너는 내 자랑이었어</h3>
+                                <p>시하</p>
+                            </div>
+                        </a>
+                    </div><!-- .cont1_item -->
+                    <div class="cont1_item">
+                        <a href="https://www.melon.com/album/detail.htm?albumId=2302870" target="_blank">
+                            <img src="img/같은 시간속의 너.jpg" alt="아이템2" />
+                            <div class="cont1_item_txt">
+                                <h3>같은 시간 속의 너</h3>
+                                <p>나얼</p>
+                            </div>
+                            <a href="#"></a>
+                    </div><!-- .cont1_item -->
+                    <div class="cont1_item">
+                        <a href="https://www.melon.com/album/detail.htm?albumId=11262935" target="_blank">
+                            <img src="img/같은동네.jpg" alt="아이템3" />
+                            <div class="cont1_item_txt">
+                                <h3>그 거리 (feat.정명규)</h3>
+                                <p>정창룡</p>
+                            </div>
+                        </a>
+                    </div><!-- .cont1_item -->
+                    <div class="cont1_item">
+                        <a href="https://www.melon.com/album/detail.htm?albumId=10668273" target="_blank">
+                            <img src="img/생각이 많은 게 문제야.jpg" alt="아이템4" />
+                            <div class="cont1_item_txt">
+                                <h3>생각이 많은 게 문제야</h3>
+                                <p>도후</p>
+                            </div>
+                        </a>
+                    </div><!-- .cont1_item -->
+                    <div class="cont1_item">
+                        <a href="https://www.melon.com/album/detail.htm?albumId=10428100" target="_blank">
+                            <img src="img/관꼐.jpg" alt="아이템5" />
+                            <div class="cont1_item_txt">
+                                <h3>관계</h3>
+                                <p>임세준</p>
+                            </div>
+                        </a>
+                    </div><!-- .cont1_item -->
+                </div><!-- .cont1_list_top -->
+                <div class="cont1_list_bottom">
+                    <div class="cont1_item">
+                        <a href="https://www.melon.com/album/detail.htm?albumId=10295295" target="_blank">
+                            <img src="img/퇴근길.jpg" alt="아이템6" />
+                            <div class="cont1_item_txt">
+                                <h3>퇴근길</h3>
+                                <p>그_냥</p>
+                            </div>
+                        </a>
+                    </div><!-- .cont1_item -->
+                    <div class="cont1_item">
+                        <a href="https://www.melon.com/album/detail.htm?albumId=10423246" target="_blank">
+                            <img src="img/이해.jpg" alt="아이템7" />
+                            <div class="cont1_item_txt">
+                                <h3>이해</h3>
+                                <p>양다일</p>
+                            </div>
+                        </a>
+                    </div><!-- .cont1_item -->
+                    <div class="cont1_item">
+                        <a href="https://www.melon.com/album/detail.htm?albumId=10274263" target="_blank">
+                            <img src="img/처음이라서.jpg" alt="아이템8" />
+                            <div class="cont1_item_txt">
+                                <h3>처음이라서</h3>
+                                <p>정효빈</p>
+                            </div>
+                        </a>
+                    </div><!-- .cont1_item -->
+                    <div class="cont1_item">
+                        <a href="https://www.melon.com/album/detail.htm?albumId=10534079" target="_blank">
+                            <img src="img/What do i call you.jpg" alt="아이템9" />
+                            <div class="cont1_item_txt">
+                                <h3>What Do I Call You</h3>
+                                <p>태연</p>
+                            </div>
+                        </a>
+                    </div><!-- .cont1_item -->
+                    <div class="cont1_item">
+                        <a href="https://www.melon.com/song/detail.htm?songId=2910953" target="_blank">
+                            <img src="img/say i love you.jpg" alt="아이템10" />
+                            <div class="cont1_item_txt">
+                                <h3>Say I Love You</h3>
+                                <p>포맨(4MEN)</p>
+                            </div>
+                        </a>
+                    </div><!-- .cont1_item -->
+                </div><!-- .cont1_list_bottom -->
+            </div><!-- .cont1_list -->
+        </div><!-- .cont1 end -->
+
+        <div class="banner">
+            <a href="https://ticket.melon.com/concert/index.htm?genreType=GENRE_CON#" target="_blank"><img
+                    src="img/배너.png" alt="배너" />
+                <h3>올 여름 페스티벌 총 집합</h3>
+                <h4>특가 놓치지 마세요!</h4>
+                <p>기간 : 06/10 ~ 07/20</p>
+            </a>
+        </div>
+
+        <div class="cont2">
+            <div class="cont2_left">
+                <div class="chart">
+                    <h1>멜론차트</h1>
+                    <h6>2023.07.13 15:00</h6>
+                    <div class="chart_tap">
+                        <ul class="chart_menu">
+                            <li><a href="#">
+                                    <p>TOP100</p>
+                                </a></li>
+                            <li><a href="#">
+                                    <p>POP</p>
+                                </a></li>
+                            <li><a href="#">
+                                    <p>찜한 아티스트</p>
+                                </a></li>
+                        </ul><!-- .chart_menu end -->
+                        <ul class="chart_item">
+                            <div class="r1">
+                                <li>
+                                    <a href="https://www.melon.com/song/detail.htm?songId=36599950" target="_blank">
+                                        <h4>1.</h4>
+                                        <img src="img/수퍼샤이.jpg" alt="차트1" />
+                                        <div class="r_txt">
+                                            <h5>Super shy</h5>
+                                            <p>NewJeans</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </div>
+                            <div class="r2">
+                                <li>
+                                    <a href="https://www.melon.com/song/detail.htm?songId=36430773" target="_blank">
+                                        <h4>2.</h4>
+                                        <img src="img/퀸카.jpg" alt="차트2" />
+                                        <div class="r_txt">
+                                            <h5>퀸카(Queencard)</h5>
+                                            <p>(여자)아이들</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </div>
+                            <div class="r3">
+                                <li>
+                                    <a href="https://www.melon.com/song/detail.htm?songId=36356993" target="_blank">
+                                        <h4>3.</h4>
+                                        <img src="img/아이엠.jpg" alt="차트3" />
+                                        <div class="r_txt">
+                                            <h5>I AM</h5>
+                                            <p>IVE (아이브)</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </div>
+                            <div class="r4">
+                                <li>
+                                    <a href="https://www.melon.com/song/detail.htm?songId=36411344" target="_blank">
+                                        <h4>4.</h4>
+                                        <img src="img/이브.jpg" alt="차트4" />
+                                        <div class="r_txt">
+                                            <h5>이브,프시케 그리고 푸른...</h5>
+                                            <p>LE SSERAFIM (르세라핌)</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </div>
+                            <div class="r5">
+                                <li>
+                                    <a href="https://www.melon.com/song/detail.htm?songId=36416114" target="_blank">
+                                        <h4>5.</h4>
+                                        <img src="img/스파이시.jpg" alt="차트5" />
+                                        <div class="r_txt">
+                                            <h5>Spicy</h5>
+                                            <p>aespa</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </div>
+                        </ul><!-- .chart_item end -->
+                    </div><!-- .chart_tap end -->
+                </div><!-- .chart end -->
+            </div><!-- .cont2_left end -->
+            <div class="cont2_right">
+                <div class="theme">
+                    <h1>테마 / 장르</h1>
+                    <h6>●○</h6>
+                    <div class="theme_list">
+                        <ul class="theme_item">
+                            <div class="theme_top">
+                                <li>
+                                    <a href="https://www.melon.com/dj/djfinder/djfinder_inform.htm?djSearchType=T&djSearchKeyword=%EC%9E%A5%EB%A7%88#params%5BdjSearchType%5D=T&params%5BdjSearchKeyword%5D=%2523%25EC%259E%25A5%25EB%25A7%2588&params%5BorderBy%5D=POP&params%5BpagingFlag%5D=Y&params%5BtagSearchType%5D=S&po=pageObj&startIndex=1"
+                                        target="_blank">
+                                        <img src="img/장마.jpg" alt="테마1">
+                                        <p>#장마</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.melon.com/dj/djfinder/djfinder_inform.htm?djSearchType=T&djSearchKeyword=%23%EC%82%AC%EB%9E%91"
+                                        target="_blank">
+                                        <img src="img/사랑.jpg" alt="테마2">
+                                        <p>#사랑</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.melon.com/dj/djfinder/djfinder_inform.htm?djSearchType=T&djSearchKeyword=%EA%B0%90%EC%84%B1"
+                                        target="_blank">
+                                        <img src="img/감성.jpg" alt="테마3">
+                                        <p>#감성</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.melon.com/dj/djfinder/djfinder_inform.htm?djSearchType=T&djSearchKeyword=%EC%97%AC%EB%A6%84"
+                                        target="_blank">
+                                        <img src="img/여름.jpg" alt="테마4">
+                                        <p>#여름</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.melon.com/dj/djfinder/djfinder_inform.htm?djSearchType=T&djSearchKeyword=%EC%8B%A0%EB%82%98%EB%8A%94"
+                                        target="_blank">
+                                        <img src="img/신나는.jpg" alt="테마5">
+                                        <p>#신나는</p>
+                                    </a>
+                                </li>
+                            </div>
+                            <div class="theme_bottom">
+                                <li>
+                                    <a href="https://www.melon.com/dj/djfinder/djfinder_inform.htm?djSearchType=T&djSearchKeyword=%EC%84%BC%EC%B9%98%ED%95%9C"
+                                        target="_blank">
+                                        <img src="img/센치한.jpg" alt="테마6">
+                                        <p>#센치한</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.melon.com/dj/djfinder/djfinder_inform.htm?djSearchType=T&djSearchKeyword=%EA%B8%B0%EB%B6%84%EC%A2%8B%EC%9D%80"
+                                        target="_blank">
+                                        <img src="img/기분좋은.jpg" alt="테마7">
+                                        <p>#기분좋은</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.melon.com/dj/djfinder/djfinder_inform.htm?djSearchType=T&djSearchKeyword=%EB%B6%84%EC%9C%84%EA%B8%B0"
+                                        target="_blank">
+                                        <img src="img/분위기.jpg" alt="테마8">
+                                        <p>#분위기</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.melon.com/dj/djfinder/djfinder_inform.htm?djSearchType=T&djSearchKeyword=%EC%9E%94%EC%9E%94%ED%95%9C"
+                                        target="_blank">
+                                        <img src="img/잔잔한.jpg" alt="테마9">
+                                        <p>#잔잔한</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.melon.com/dj/djfinder/djfinder_inform.htm?djSearchType=T&djSearchKeyword=%EC%84%A4%EB%A0%98"
+                                        target="_blank">
+                                        <img src="img/설렘.jpg" alt="테마10">
+                                        <p>#설렘</p>
+                                    </a>
+                                </li>
+                            </div>
+                        </ul><!-- .theme_item end -->
+                    </div><!-- .theme_list end -->
+                </div><!-- .theme end -->
+                <div class="cont2_down">
+                    <div class="notice">
+                        <div class="notice_menu">
+                            <h1>공지사항</h1>
+                            <a href="#">더보기 ></a>
+                        </div><!-- .notice_menu end -->
+                        <div class="notice_box">
+                            <div class="n1">
+                                <div class="notice_item">
+                                    <a href="#">[뮤직웨이브 Beta] 오픈 안내</a>
+                                    <p>2023.07.10</p>
+                                </div><!-- .notice_item end -->
+                            </div>
+                            <div class="n1">
+                                <div class="notice_item">
+                                    <a href="#">멜론 서비스 점검 안내</a>
+                                    <p>2023.07.06</p>
+                                </div><!-- .notice_item end -->
+                            </div>
+                            <div class="n1">
+                                <div class="notice_item">
+                                    <a href="#">06/22(화) SKT 본인확인 서비...</a>
+                                    <p>2023.06.22</p>
+                                </div><!-- .notice_item end -->
+                            </div>
+                            <div class="n1">
+                                <div class="notice_item">
+                                    <a href="#">멜론캐시(무료캐시)소멸 안내</a>
+                                    <p>2023.06.19</p>
+                                </div><!-- .notice_item end -->
+                            </div>
+                        </div><!-- .notice_box end -->
+                    </div><!-- .notice end -->
+                    <div class="qna">
+                        <div class="qna_menu">
+                            <h1>공지사항</h1>
+                            <a href="#">바로가기 ></a>
+                        </div><!-- qna_menu end-->
+                        <div class="qna_box">
+                            <div class="qna_item">
+                                <a href="#">멜론 플레이어에서 사용기기는..</a>
+                                <p>2023.07.10</p>
+                            </div><!-- .qna_item end -->
+                            <div class="qna_item">
+                                <a href="#">다운로드한 음악 파일은 내 컴퓨...</a>
+                                <p>2023.07.06</p>
+                            </div><!-- .qna_item end -->
+                            <div class="qna_item">
+                                <a href="#">MP3 파일을 DCF파일로 바꾸...</a>
+                                <p>2023.06.22</p>
+                            </div><!-- .qna_item end -->
+                            <div class="qna_item">
+                                <a href="#">다운로드 이용 PC 제한이 뭔가...</a>
+                                <p>2023.06.19</p>
+                            </div><!-- .qna_item end -->
+                        </div><!-- .qna_box end -->
+                    </div><!-- .qna end -->
+                </div><!-- .cont2_down end -->
+            </div><!-- .cont2_right end -->
+
+        </div><!-- .cont2 end -->
+        <div class="cont3">
+            <div class="cont3_menu">
+                <h1>인기 있어요<p>지금 이슈가 되는 아티스트의 인기 컨텐츠 입니다.</p>
+                </h1>
+                <ul class="cont3_menu_more">
+                    <li><a href="#">2/2</a></li>
+                    <li><a href="#">
+                            < >
+                        </a></li>
+                </ul><!-- .cont3_menu_more end -->
+            </div><!-- .cont3_menu end -->
+            <div class="cont3_list">
+                <div class="cont3_top">
+                    <div class="cont3_item">
+                        <a href="#">
+                            <img src="img/매거진1.jpg" alt="매거진" />
+                            <h3>너와 내가 꿈궈왔던 하루! NMIXX [...</h3>
+                            <h5>매거진 이벤트</h5>
+                            <p>멜론 매거진</p>
+                        </a>
+                    </div><!-- .cont3_item end -->
+                    <div class="cont3_item">
+                        <a href="#">
+                            <img src="img/매거진2.jpg" alt="매거진" />
+                            <h3>코요태가 그리는 '바람'의 형태</h3>
+                            <h5>비하인드 컷</h5>
+                            <p>멜론 매거진</p>
+                        </a>
+                    </div><!-- .cont3_item end -->
+                    <div class="cont3_item">
+                        <a href="#">
+                            <img src="img/매거진3.jpg" alt="매거진" />
+                            <h3>7년 만에 새로 나오는 ODD EYE CI...</h3>
+                            <h5>매거진 이벤트</h5>
+                            <p>멜론 매거진</p>
+                        </a>
+                    </div><!-- .cont3_item end -->
+                </div>
+                <div class="cont3_bottom">
+                    <div class="cont3_item">
+                        <a href="#">
+                            <img src="img/매거진4.jpg" alt="매거진" />
+                            <h3>트랙제로 Alive, 생생한 공연 후기 '...</h3>
+                            <h5>트랙제로</h5>
+                            <p>멜론 매거진</p>
+                        </a>
+                    </div><!-- .cont3_item end -->
+                    <div class="cont3_item">
+                        <a href="#">
+                            <img src="img/매거진5.jpg" alt="매거진" />
+                            <h3>음악의 무한한 가능성, 변주곡의 세계</h3>
+                            <h5>장르 인사이드</h5>
+                            <p>멜론 매거진</p>
+                        </a>
+                    </div><!-- .cont3_item end -->
+                    <div class="cont3_item">
+                        <a href="#">
+                            <img src="img/매거진6.jpg" alt="매거진" />
+                            <h3>'바비 걸'들을 위한 퀸드르이 컬래버, ...'</h3>
+                            <h5>위클리 뮤직 뉴스</h5>
+                            <p>멜론 매거진</p>
+                        </a>
+                    </div><!-- .cont3_item end -->
+                </div>
+            </div><!-- .cont3_list end -->
+        </div><!-- .cont3 end -->
+
+        <!-- 웹 플레이어 코드 작성. -->
+
+        <div class="cont4">
+            <h1>내가 좋아할 음악</h1>
+            <ul class="cont4_list" data-aos="flip-down">
+                <li>
+                    <h3>이번 주 인기 플레이 리스트</h3>
+                    <div class="cont4_item">
+                        <a href="#">
+                        <img src="img/플리.png" alt="파도" />
+                        <h5>무더위를 날려줄 청량한 아이...</h5>
+                        <p>@Ta3ho_</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <h3>요즘 꽂힌 추억의 음악</h3>
+                    <div class="cont4_item">
+                        <a href="#">
+                        <img src="img/모음1.png" alt="모음1" />
+                        <h5>180도, 그대라는 사치, 너는 내...</h5>
+                        <p>벤(BEN), 한동근, 시하, 에일리 등등</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <h3>유사곡 추천</h3>
+                    <div class="cont4_item">
+                        <a href="#">
+                        <img src="img/모음2.png" alt="모음2" />
+                        <h5>사랑에 대하여, 처음이라서, B...</h5>
+                        <p>토리(Torry), 정효빈, 블라세(B..</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <h3>추천 아티스트 필청 트랙</h3>
+                    <div class="cont4_item">
+                        <a href="#">
+                        <img src="img/정승환.jpg" alt="필청" />
+                        <h5>정승환</h5>
+                        <p>#슬픔  #이별  #감성</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <h3>이번 주 인기 플레이 리스트</h3>
+                    <div class="cont4_item">
+                        <a href="#">
+                        <h5>요즘 내 취향을</h5>
+                        <h5>선택해 주세요!</h5>
+                        <p>선택된 취향 ) 발라드, R&B</p>
+                        <img src="img/장식2.png" alt="버튼">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div><!-- .cont4 end -->
+        <div class="cont5">
+            <h1>내가 좋아할 음악</h1>
+            <div class="cont5_menu">
+                <a href="#">더보기></a>
+            </div>
+            <ul class="cont5_list">
+                <li>
+                    <div class="cont5_item"  data-aos="flip-up">
+                        <a href="#">
+                        <img src="img/인기플리1.jpg" alt="인기플리" />
+                        <h5>언제 들어도 좋은 2010년대 ...</h5>
+                        <p>DJ) Mogu_</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="cont5_item"  data-aos="flip-up">
+                        <a href="#">
+                        <img src="img/인기플리2.jpg" alt="인기플리" />
+                        <h5>촉촉한 감성에 젖어드는 비오...</h5>
+                        <p>DJ) SoulMuse</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="cont5_item"  data-aos="flip-up">
+                        <a href="#">
+                        <img src="img/인기플리3.png" alt="인기플리" />
+                        <h5>여행 갈 때 듣기 좋은 기분 업...</h5>
+                        <p>DJ) UoYo</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="cont5_item"  data-aos="flip-up">
+                        <a href="#">
+                        <img src="img/인기플리4.jpg" alt="인기플리" />
+                        <h5>우울할 때 혼자 듣는 TOP100</h5>
+                        <p>DJ) 멜론 TOP100</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="cont5_item" data-aos="flip-up">
+                        <a href="#">
+                        <img src="img/인기플리5.jpg" alt="인기플리">
+                        <h5>아이돌이 올려주는 나의 텐션!!</h5>
+                        <p>DJ) Ta3ho_</p>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div><!-- .cont5 end -->
+
+        <div class="cont6">
+            <h1>멜론티켓 PICK! 추천공연</h1>
+            <div class="cont6_list">
+                <div class="cont6_item">
+                    <a href="#">
+                        <img src="img/티켓1.png" alt="티켓1">
+                        <div class="item_sec">
+                        <h1>불타는 트롯맨 콘서트</h1>
+                        <h2>올림픽공원 올림픽 홀</h2>
+                        <h3>08.25 - 08.27</h3>
+                        <p>바로가기 ></p>
+                    </div>
+                    </a>
+                </div>
+                <div class="cont6_item">
+                    <a href="#">
+                        <img src="img/티켓6.png" alt="티켓1">
+                        <div class="item_sec">
+                        <h1>이번주 추천 공연</h1>
+                        <h2>멜론티켓 Pick 추천 공연!</h2>
+                        <h3>놓치지 마세요!</h3>
+                        <p>바로가기 ></p>
+                    </div>
+                    </a>
+                </div>
+                <div class="cont6_item">
+                    <a href="#">
+                        <img src="img/티켓2.png" alt="티켓1">
+                        <div class="item_sec">
+                        <h1>신라 힙합 페스티벌</h1>
+                        <h2>경주엑스포대공원 백결공연장</h2>
+                        <h3>08.5 (토) 오후 1시</h3>
+                        <p>바로가기 ></p>
+                    </div>
+                    </a>
+                </div>
+                <div class="cont6_item">
+                    <a href="#">
+                        <img src="img/티켓3.png" alt="티켓1">
+                        <div class="item_sec">
+                        <h1>뮤지컬 REBECCA</h1>
+                        <h2>블루스퀘어 신한카드홀</h2>
+                        <h3>08.19 - 11.19</h3>
+                        <p>바로가기 ></p>
+                    </div>
+                    </a>
+                </div>
+                <div class="cont6_item">
+                    <a href="#">
+                        <img src="img/티켓4.png" alt="티켓1">
+                        <div class="item_sec">
+                        <h1>[글로벌 콘서트]</h1>
+                        <h2>박효신</h2>
+                        <h3>06.15 - 09.07</h3>
+                        <p>바로가기</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="cont6_item">
+                    <a href="#">
+                        <img src="img/티켓5.png" alt="티켓1">
+                        <div class="item_sec">
+                        <h1>IU - 미디어 아트</h1>
+                        <h2>07.21 - 08.20</h2>
+                        <h3>배급: EDAM, CRVM</h3>
+                        <p>바로가기 ></p>
+                    </div>
+                    </a>
+                </div>
+            </div><!-- .cont6_list end -->
+        </div><!-- .cont6 end -->
+    </main>
+
+
+    <section class="web_play">
+        <div class="web_item">
+            <img src="img/수퍼샤이.jpg" alt="웹플레이어">
+            <div class="web_txt">
+                <h3>Super shy</h3>
+                <p>NewJeans</p>
+            </div>
+        </div><!-- .web_item end -->
+        <div class="web_tool">
+            <a href="#" class="s"><img src="img/셔플.png" alt="셔플"></a>
+            <a href="#" class="u"><img src="img/이전곡.png" alt="이전곡"></a>
+            <a href="#" class="p"><img src="img/재생.png" alt="재생"></a>
+            <a href="#" class="n"><img src="img/다음곡.png" alt="다음곡"></a>
+            <a href="#" class="r"><img src="img/반복.png" alt="반복"></a>
+        </div>
+        <div class="web_list">
+            <a href="#" class="v"><img src="img/볼륨.png" alt="볼륨"></a>
+            <a href="#" class="l"><img src="img/목록.png" alt="목록"></a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="st_menu">
+                <a href="https://www.melon.com/m6/campaign.htm" target="_blank">멜론 6.0 둘러보기</a>
+                <a href="https://studio.melon.com/" target="_blank">멜론 스튜디오</a>
+                <a href="https://www.melon.com/customer/serviceintro/index.htm" target="_blank">Windows 플레이어</a>
+                <a href="https://www.melon.com/customer/serviceintro/multi_pc_web.htm" target="_blank">Mac 플레이어</a>
+                <a href="https://www.melon.com/customer/serviceintro/ipad.htm" target="_blank">iPad</a>
+                <a href="https://faqs2.melon.com/customer/index.htm">고객센터</a>
+            </div><!-- .st_menu end -->
+            <div class="nd_menu">
+                <a href="https://info.melon.com/terms/web/terms1_1.html" target="_blank">
+                    <h3>이용약관</h3>
+                </a>
+                <a href="https://info.melon.com/terms/web/terms1_3.html" target="_blank">
+                    <h3>위치기반서비스 이용약관</h3>
+                </a>
+                <a href="https://info.melon.com/terms/web/terms3.html" target="_blank">
+                    <h3>개인정보 처리방침</h3>
+                </a>
+                <a href="https://info.melon.com/terms/web/terms5_1.html" target="_blank">청소년 보호정책</a>
+                <a href="https://faqs2.melon.com/customer/faq/informFaq.htm?no=1&faqId=QUES20140616000001&SEARCH_KEY=&SEARCH_PAR_CATEGORY=CATE20130909000006&SEARCH_CATEGORY=CATE20130909000021"
+                    target="_blank">제휴/프로모션문의</a>
+                <a href="https://www.melon.com/emailCollectionReject.html" target="_blank">이메일주소무단수집거부</a>
+                <a href="https://partner.melon.com/partrct/login/web/login_loginProcess.htm?t=s"
+                    target="_blank">파트너센터</a>
+            </div><!-- .nd_menu end -->
+            <div class="rd_menu">
+                <h3>(주)카카오엔터테인먼트</h3>
+                <p>경기도 성남시 분당구 판교역로 221</p>
+                <p>대표이사 : 이진수, 김성수</p>
+                <p>사업자등록번호 : 220-88-02594</p>
+                <p>통신판매업신고번호 : 2018-성남분당B-0004</p>
+                <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208802594" target="_blank">
+                    <p>사업자정보 확인 ></p>
+                </a>
+            </div><!-- .nd_menu end -->
+            <div class="th_menu">
+                <p>문의전화 : 1566-7727(평일 09:00 ~ 18:00, 유료)</p>
+                <p>이메일 : melon_info@kakaoent.com</p>
+                <p>호스팅서비스사업자 : (주)카카오엔터테인먼트</p>
+                <p>ⓒKakao Entertainment Corp.</p>
+            </div><!-- .th_menu end -->
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+
+</body>
+
+</html>
